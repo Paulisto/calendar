@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+
+td {
+  text-align: right;
+  height: 110px;
+}
+
+.event-div:hover {
+  cursor: pointer;
+}
