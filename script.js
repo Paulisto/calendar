@@ -158,9 +158,12 @@ function openEditModal(index) {
 
     const event = eventsArray[index];
 
+    // Preloads data
     document.getElementById('edit-name').value = event.name;
 
     document.getElementById('edit-date').value = event.date;
+
+    document.getElementById('edit-time').value = event.time;
 
     document.getElementById('edit-event-modal').showModal();
 }
