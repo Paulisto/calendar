@@ -193,6 +193,18 @@ function next(){
     renderCalendar();
 }
 
+
+// Logic for jumping to current day
+function jumptoToday() {
+
+    currentMonth = date.getMonth();
+    currentYear = date.getFullYear();
+    currentDay = date.getDate();
+
+    renderCalendar(currentMonth, currentYear, currentDay);
+
+}
+
 // Adding an event to the calendar
 function add() {
     const nameInput = document.getElementById('event-name');
