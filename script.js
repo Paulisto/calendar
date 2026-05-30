@@ -65,7 +65,8 @@ function renderCalendar() {
                     'border',
                     'border-gray-300',
                     'align-top',
-                    'bg-gray-100'
+                    'bg-gray-100',
+                    'dark:bg-gray-950/50'
                 );
 
             } else if (renderNum > numOfDays) {
@@ -75,7 +76,8 @@ function renderCalendar() {
                     'border',
                     'border-gray-300',
                     'align-top',
-                    'bg-gray-100'
+                    'bg-gray-100',
+                    'dark:bg-gray-950/50',
                 );
 
             } else {
@@ -83,6 +85,9 @@ function renderCalendar() {
                 // Day number
                 const dayNumber = document.createElement('div');
                 dayNumber.textContent = renderNum;
+                dayNumber.classList.add(
+                    'dark:text-white'
+                )
 
                 calendarCell.appendChild(dayNumber);
 
@@ -94,6 +99,7 @@ function renderCalendar() {
                 ) {
                     calendarCell.classList.add(
                         'bg-yellow-100',
+                        'dark:bg-violet-500/50',
                         'font-bold'
                     );
                 };
@@ -124,11 +130,13 @@ function renderCalendar() {
 
                         eventElement.classList.add(
                             'bg-green-200',
+                            'dark:bg-green-900/60',
                             'rounded',
                             'px-1',
                             'mt-1',
                             'text-left',
-                            'text-sm'
+                            'text-sm',
+                            'dark:text-white'
                         );
 
                         calendarCell.appendChild(eventElement);
